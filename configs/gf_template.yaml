@@ -1,0 +1,21 @@
+experiment_dir: output/%DIR/%PATCH/%YEAR
+n_forward_steps: 1460
+forward_steps_in_memory: 73
+checkpoint_path: ckpt/%CKPT
+logging:
+  log_to_screen: true
+  log_to_wandb: false
+  log_to_file: true
+  project: ace
+  entity: your_wandb_entity
+initial_condition:
+  path: initialization/%DIR/%PATCH/%INITYEAR1231_1800.nc
+forcing_loader:
+  dataset:
+    data_path: forcing/%DIR/%PATCH/
+    n_repeats: 1
+  num_data_workers: 4
+data_writer:
+  save_prediction_files: false
+  save_monthly_files: true
+  names: %SAVE_VARS

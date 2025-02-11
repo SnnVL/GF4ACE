@@ -1,0 +1,3 @@
+# Folder containing initial conditions for ACE
+
+Initial conditions can be downloaded on [Dryad](). They should be stored in `./initialization/<model>/20191231_1800.nc` for each model.
