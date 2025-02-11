@@ -1,0 +1,7 @@
+# Folder containing forcing datasets for ACE
+
+Forcing datasets can be downloaded at the [Ai2 Hugging Face repository](https://huggingface.co/collections/allenai/ace-67327d822f0f0d8e0e5e6ca4)
+
+For ACE-FV3 and ACE-EAM, the forcing can be used directly as the control forcing for the Green's function simulations. To create the 1971-2020 control climatology for ERA5, run `create_ERA5_control.py`
+
+Control forcing files should be stored in `./forcing/<model_dir>/control/forcing.nc`; patch forcing will be created when running `_run_patch.py`.
