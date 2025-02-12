@@ -28,6 +28,15 @@ MANIFEST
 ace_orig
 *.nc
 *.tar
+control.yaml
+patch*.yaml
+slurm*
+output/era*
+output/eam*
+output/fv3*
+initialization/era*
+initialization/eam*
+initialization/fv3*
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
