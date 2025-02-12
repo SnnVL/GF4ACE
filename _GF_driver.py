@@ -9,15 +9,18 @@ A = patch amplitude in K
 __author__ = "Senne Van Loon"
 __date__ = "11 February 2025"
 
-model = 'ace'
+model = 'era'
 A = 2
 
 import xarray as xr
+import os
 from module_GF import DIR, create_patches, run_patch, get_R_values
 
 if __name__ == '__main__':
+
     # Create patches
-    create_patches(model,A)
+    if not os.path.isfile(DIR+'forcing/'+model+'/GFMIP_patches_'+str(A)+'K.nc'):
+        create_patches(model,A)
 
     # Run control
     run_patch(model,'control',A)

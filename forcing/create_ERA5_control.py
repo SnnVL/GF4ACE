@@ -8,7 +8,7 @@ FORCING_DIR = './'
 
 # Load all ERA5 forcing data
 clim_time = cftime.num2date(range(0,1460*6,6),'hours since 2021-01-01 00:00:00',calendar='365_day')
-ds = xc.open_mfdataset(FORCING_DIR+'ERA5/raw/forcing_*.nc')
+ds = xc.open_mfdataset(FORCING_DIR+'era/raw/forcing_*.nc')
 
 # Calculate climatology for every 6 hours
 ds_clim = []
@@ -27,7 +27,7 @@ for date in clim_time:
 ds_clim = xr.concat(ds_clim,dim='time',data_vars='minimal')
 
 # Open 2021 forcing data as base file (helps with keeping forcing file consistent with ACE)
-ds = xr.open_dataset(FORCING_DIR+'ERA5/raw/forcing_2021.nc')
+ds = xr.open_dataset(FORCING_DIR+'era/raw/forcing_2021.nc')
 
 # Save all forcing inputs
 ds['DSWRFtoa'] = (('time','latitude','longitude'), ds_clim['DSWRFtoa'].values)
@@ -44,4 +44,4 @@ ds_['time'] = np.array([dt.datetime(2020,12,31,18)])
 ds_dec = xr.concat([ds_,ds],dim='time',data_vars='minimal')
 
 # Save forcing
-ds_dec.to_netcdf(FORCING_DIR+'ERA5/control/forcing.nc')
+ds_dec.to_netcdf(FORCING_DIR+'era/control/forcing.nc')

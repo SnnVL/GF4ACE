@@ -56,8 +56,8 @@ model_dct = {
     'fv3': {
         'model_name' : 'ACE-FV3',
         'ckpt_name': 'ace_ckpt.tar',
-        'lat_name' : 'grid_yt',
-        'lon_name' : 'grid_xt',
+        'lat_name' : 'latitude',
+        'lon_name' : 'longitude',
         'tas_name': 'surface_temperature',
         'rsut_name': 'USWRFtoa',
         'rlut_name': 'ULWRFtoa',

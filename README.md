@@ -7,8 +7,13 @@ Green's function experiments with the [Ai2 Climate Emulator (ACE)](https://githu
 ### Installation
 To install the necessary packages, run
 ```
+conda create --name fme python=3.10
+conda activate fme
 pip install fme
 conda install -c conda-forge xcdat
+pip install cartopy
+pip install jupyterlab
+conda install conda-forge::cmcrameri
 ```
 See [ACE documentation](https://ai2-climate-emulator.readthedocs.io/en/latest/) for more information about ACE. 
 
@@ -31,7 +36,7 @@ To get the net ToA radiation and to plot the Green's function, the incoming sola
 ./output/<model>/ocean_mask.nc
 ```
 
-All model settings are stored in `_model_settings.py`.
+All model settings are stored in `_model_settings.py`. Make sure the checkpoint name is correct.
 
 To perform all patch simulation for a certain `<model>` and `<patch_amplitude>`, change the model and amplitude in `_GF_driver.py` and run
 ```python _GF_driver.py```
