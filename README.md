@@ -50,7 +50,7 @@ This work is a collaborative effort between [Senne Van Loon](https://scholar.goo
 
 ### References
 
-Senne Van Loon, Maria Rugenstein, & Elizabeth A. Barnes (2025), Green's functions of ERA5 using the Ai2 Climate Emulator, [ArXiv](https://doi.org/xxxxxxx)
+Senne Van Loon, Maria Rugenstein, & Elizabeth A. Barnes (2025), Green's functions of ERA5 using the Ai2 Climate Emulator, preprint to be added
 
 ### License
 
